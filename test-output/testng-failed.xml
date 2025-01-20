@@ -5,17 +5,9 @@
     <classes>
       <class name="all.AllinOne">
         <methods>
-          <include name="HiddenElement"/>
-          <include name="MouseHover"/>
-          <include name="enterName"/>
-          <include name="uploadFile"/>
           <include name="teardown"/>
-          <include name="gender"/>
-          <include name="PromptAlert"/>
-          <include name="NewWindow"/>
+          <include name="ScreeShot"/>
           <include name="setup"/>
-          <include name="SimpleAlert"/>
-          <include name="form"/>
         </methods>
       </class> <!-- all.AllinOne -->
     </classes>

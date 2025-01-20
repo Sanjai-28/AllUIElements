@@ -1,15 +1,20 @@
 package all;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -195,6 +200,14 @@ public class AllinOne {
 		Actions ac= new Actions(driver);
 		ac.dragAndDrop(drag,drop);
 		Thread.sleep(3000);
+	}
+	
+	@Test
+	public void ScreeShot() throws IOException
+	{
+		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		String path=System.getProperty("user.dir")+"\\target\\"+"scr.jpg";
+		FileHandler.copy(src, new File(path));
 	}
 	
 	@Test
